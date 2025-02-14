@@ -38,14 +38,18 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.symmetric(horizontal:36, vertical: 18),
               child: Row(
                 children: [
-                  Text("I want to", style: TextStyle(fontSize: 32)),
-                  Text(" eat", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, decoration: TextDecoration.underline)),
+                  Text("I want to ", style: TextStyle(fontSize: 32)),
+                  Text("eat", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, decoration: TextDecoration.underline)),
                 ],
               ),
             ),
-            TabBar(tabs: myTabs)
-            //TabBar
-      
+            TabBar(
+              tabs: myTabs,
+              indicator: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                color: Color(0xFFFFB6C1),  // Color de la barra de selección
+              ),
+            )//TabBar
           ],)
       ),
     );
