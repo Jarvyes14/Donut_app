@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class MyTab extends StatelessWidget {
-  final String IconPath;
-  const MyTab({super.key, required this.IconPath});
+  final String iconPath;
+  const MyTab({super.key, required this.iconPath});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,6 @@ class MyTab extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: Colors.grey[200],
       ),
-      
-        child: Image.asset(IconPath, color: Colors.grey[800])));
+        child: Image.asset(iconPath, key: ValueKey(iconPath), color: Colors.grey[800])));
   }
 }

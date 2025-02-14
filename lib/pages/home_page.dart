@@ -10,11 +10,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> myTabs = [
-    MyTab(IconPath: 'lib/icons/icons/burger.png'),
-    MyTab(IconPath: 'lib/icons/donut.png'),
-    MyTab(IconPath: 'lib/icons/pancakes.png'),
-    MyTab(IconPath: 'lib/icons/pizza.png'),
-    MyTab(IconPath: 'lib/icons/smoothie.png')
+    MyTab(iconPath: 'assets/icons/burger.png'),
+    MyTab(iconPath: 'assets/icons/donut.png'),
+    MyTab(iconPath: 'assets/icons/pancakes.png'),
+    MyTab(iconPath: 'assets/icons/pizza.png'),
+    MyTab(iconPath: 'assets/icons/smoothie.png')
   ];
   @override
   Widget build(BuildContext context) {
