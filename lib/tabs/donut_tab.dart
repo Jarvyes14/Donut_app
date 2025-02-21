@@ -23,11 +23,16 @@ class DonutTab extends StatelessWidget {
         childAspectRatio: 0.9,
       ),
       itemBuilder: (context, index) {
-        return DonutTile(
-          donutFlavor: donutsOnSale[index][0],
-          donutPrice: donutsOnSale[index][1],
-          donutColor: donutsOnSale[index][2],
-          donutImage: donutsOnSale[index][3],
+        return Card(
+          color: donutsOnSale[index][2],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(donutsOnSale[index][3], height: 100, width: 100),
+              Text(donutsOnSale[index][0], style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              Text('\$${donutsOnSale[index][1]}', style: TextStyle(fontSize: 16)),
+            ],
+          ),
         );
       },
     );
