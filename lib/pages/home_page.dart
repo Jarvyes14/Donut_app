@@ -15,11 +15,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> myTabs = [
-    MyTab(iconPath: 'assets/icons/burger.png'),
     MyTab(iconPath: 'assets/icons/donut.png'),
+    MyTab(iconPath: 'assets/icons/burger.png'),
+    MyTab(iconPath: 'assets/icons/smoothie.png'),
     MyTab(iconPath: 'assets/icons/pancakes.png'),
     MyTab(iconPath: 'assets/icons/pizza.png'),
-    MyTab(iconPath: 'assets/icons/smoothie.png')
   ];
   @override
   Widget build(BuildContext context) {
@@ -43,19 +43,19 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.symmetric(horizontal:36, vertical: 18),
               child: Row(
                 children: [
-                  Text("I want to", style: TextStyle(fontSize: 32)),
-                  Text(" eat", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, decoration: TextDecoration.underline)),
+                  Text("I want to ", style: TextStyle(fontSize: 32)),
+                  Text("Eat", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, decoration: TextDecoration.underline)),
                 ],
               ),
             ),
             TabBar(tabs: myTabs),
             Expanded(
               child: TabBarView(children: [
-                BurgerTab(),
                 DonutTab(),
+                BurgerTab(),
+                SmootieTab(),
                 PancakesTab(),
                 PizzaTab(),
-                SmootieTab(),
                 ]),
             ),  
             //TabBar
